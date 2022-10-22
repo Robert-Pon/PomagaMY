@@ -1,0 +1,96 @@
+package com.name.social_helper_r_p.user;
+
+import android.content.SharedPreferences;
+import android.os.Build;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+
+import com.name.social_helper_r_p.R;
+import com.name.social_helper_r_p.connections.Data;
+import com.name.social_helper_r_p.connections.Fetch;
+import com.name.social_helper_r_p.connections.Return;
+import com.name.social_helper_r_p.connections.URLS;
+import com.name.social_helper_r_p.connections.Request;
+import com.name.social_helper_r_p.connections.RequestData;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+
+public class MyDataBottom extends BottomSheetDialogFragment {
+
+    Fetch fetch = new Fetch();
+    URLS urls = new URLS();
+
+    Button update;
+
+    EditText email;
+    EditText name;
+    EditText surname;
+    EditText description;
+
+    SharedPreferences preferences;
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.data_bottom_sheet, container, false);
+
+        email = v.findViewById(R.id.email);
+        description = v.findViewById(R.id.description);
+        name = v.findViewById(R.id.name);
+        surname = v.findViewById(R.id.surname);
+        update = v.findViewById(R.id.send);
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
+        email.setText(preferences.getString("email", ""));
+        name.setText(preferences.getString("name", ""));
+        surname.setText(preferences.getString("surname", ""));
+        description.setText(preferences.getString("description", ""));
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Thread send = new Thread(new Runnable() {
+                    @RequiresApi(api = Build.VERSION_CODES.N)
+                    @Override
+                    public void run() {
+                        LoaderBottom loaderBottom = new LoaderBottom();
+                        loaderBottom.show(getChildFragmentManager(), "d");
+                        Request request = new Request(urls.URL(), urls.setProfileData(), "POST", "POST");
+                        RequestData requestData = new RequestData();
+                        requestData.setData(new Data("name", name.getText().toString()));
+                        requestData.setData(new Data("surname", surname.getText().toString()));
+                        requestData.setData(new Data("email", email.getText().toString()));
+                        requestData.setData(new Data("description", description.getText().toString()));
+                        requestData.setData(new Data("token", preferences.getString("TOKEN", "")));
+                        requestData.setData(new Data("token_ID",  preferences.getString("TOKEN_ID", "")));
+
+                        Return response = fetch.fetch(request, requestData);
+
+                        switch (response.getType()){
+                            case 0:
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putString("name", name.getText().toString());
+                                editor.putString("surname", surname.getText().toString());
+                                editor.putString("description", description.getText().toString());
+                                editor.putString("email", email.getText().toString());
+                                editor.apply();
+                                loaderBottom.dismiss();
+                                dismiss();
+                                break;
+                        }
+                    }
+                });
+                send.start();
+            }
+        });
+
+        return v;
+    }
+}
