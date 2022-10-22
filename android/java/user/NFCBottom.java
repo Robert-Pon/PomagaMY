@@ -37,17 +37,17 @@ public class NFCBottom extends BottomSheetDialogFragment {
         QRCodeWriter qrCodeWriter = new QRCodeWriter();
         try {
             BitMatrix x = qrCodeWriter.encode(preferences.getString("USER_ID",""), BarcodeFormat.QR_CODE,400, 400 );
-            int w = x.getWidth();
-            int h = x.getHeight();
-            int[] pixels = new int[w * h];
-            for (int y = 0; y < h; y++) {
-                for (int t = 0; t < w; t++) {
-                    pixels[y * w + t] = x.get(t, y) ? Color.BLACK : Color.WHITE;
+            int width = x.getWidth();
+            int height = x.getHeight();
+            int[] pixels = new int[width*height];
+            for (int i = 0; i < height; i++) {
+                for (int i1 = 0; i1 < width; i1++) {
+                    pixels[i*width+i1] = x.get(i1, i) ? Color.BLACK : Color.WHITE;
                 }
             }
 
-            Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
-            bitmap.setPixels(pixels, 0, w, 0, 0, w, h);
+            Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+            bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
             code.setImageBitmap(bitmap);
         } catch (WriterException e) {
             e.printStackTrace();
