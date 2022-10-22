@@ -1,8 +1,6 @@
 package com.name.social_helper_r_p.connections;
 
 public class URLS {
-    //public String URL(){return "http://192.168.1.100:3001";}
-    //public String URL(){return "http://publicati.pl";}
     public String URL(){return "URL";}
     public String login(){return "/api/users/login";}
     public String register(){return "/api/users/register";}
