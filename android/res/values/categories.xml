@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="categoriesHuman">
+        <item>Jedzenie</item>
+        <item>Leki</item>
+        <item>Odzież</item>
+        <item>Sprzęty elektroniczne</item>
+        <item>Wyposarzenie domu</item>
+        <item>Rzeczy dla zwierząt</item>
+        <item>Pomoc w remoncie</item>
+        <item>Pomoc w opiece</item>
+        <item>Pomoc w nauce</item>
+        <item>Pomoc prawna</item>
+        <item>Inne</item>
+    </array>
+
+    
+    <array name="categoriesAssortment">
+        <item>Szafa</item>
+        <item>Stół</item>
+        <item>Krzesło</item>
+        <item>Łóżko</item>
+        <item>Pościel</item>
+        <item>Koce</item>
+        <item>Komputer</item>
+    </array>
+
+    <array name="search">
+        <item>Jedzenie</item>
+        <item>Leki</item>
+        <item>Odzież</item>
+        <item>Sprzęty elektroniczne</item>
+        <item>Wyposarzenie domu</item>
+        <item>Rzeczy dla zwierząt</item>
+        <item>Pomoc w remoncie</item>
+        <item>Pomoc w opiece</item>
+        <item>Pomoc w nauce</item>
+        <item>Pomoc prawna</item>
+        <item>Zbiórka pieniędzy</item>
+        <item>Inicjatywa społeczna</item>
+        <item>Schronisko dla zwierząt</item>
+        <item>Organizacja charytatywna</item>
+        <item>Dom spokojnej starości</item>
+    </array>
+
+    <array name="searchIDS">
+        <item>cH1</item>
+        <item>cH2</item>
+        <item>cH3</item>
+        <item>cH4</item>
+        <item>cH5</item>
+        <item>cH6</item>
+        <item>cH7</item>
+        <item>cH8</item>
+        <item>cH9</item>
+        <item>cH10</item>
+        <item>e1</item>
+        <item>e2</item>
+        <item>e3</item>
+        <item>e4</item>
+        <item>e5</item>
+    </array>
+
+    <array name="categoriesHumanIcons">
+        <item>food</item>
+        <item>medication</item>
+        <item>clothes</item>
+        <item>devices</item>
+        <item>home_work</item>
+        <item>pates</item>
+        <item>drill</item>
+        <item>care</item>
+        <item>education</item>
+        <item>law</item>
+        <item>law</item>
+    </array>
+
+
+    <array name="categoriesAssortmentIDS">
+        <item>cAs1</item>
+        <item>cAs2</item>
+        <item>cAs3</item>
+        <item>cAs4</item>
+        <item>cAs5</item>
+        <item>cAs6</item>
+        <item>cAs7</item>
+    </array>
+
+    <array name="categoriesHumanIDS">
+        <item>cH1</item>
+        <item>cH2</item>
+        <item>cH3</item>
+        <item>cH4</item>
+        <item>cH5</item>
+        <item>cH6</item>
+        <item>cH7</item>
+        <item>cH8</item>
+        <item>cH9</item>
+        <item>cH10</item>
+        <item>cH11</item>
+    </array>
+
+    <array name="categoriesLearning">
+        <item>J. Polski</item>
+        <item>J. Angielski</item>
+        <item>J. Niemiecki</item>
+        <item>J. Francuski</item>
+        <item>J. Rosyjski</item>
+        <item>J. Hiszpański</item>
+        <item>Matemtayka</item>
+        <item>Fizyka</item>
+        <item>Biologia</item>
+        <item>Chemia</item>
+        <item>Geografia</item>
+        <item>Informatyka</item>
+        <item>Plastyka</item>
+        <item>Muzyka</item>
+        <item>Rysunek</item>
+        <item>Inne</item>
+    </array>
+
+    <array name="categoriesLearningIDS">
+        <item>cL1</item>
+        <item>cL2</item>
+        <item>cL3</item>
+        <item>cL4</item>
+        <item>cL5</item>
+        <item>cL6</item>
+        <item>cL7</item>
+        <item>cL8</item>
+        <item>cL9</item>
+        <item>cL10</item>
+        <item>cL11</item>
+        <item>cL12</item>
+        <item>cL13</item>
+        <item>cL14</item>
+        <item>cL15</item>
+        <item>cL16</item>
+    </array>
+
+    <array name="categoriesAnimals">
+        <item>Karma dla psów</item>
+        <item>Karma dla kotów</item>
+        <item>Karma dla zwierząt</item>
+        <item>Legowiska</item>
+        <item>Koce</item>
+        <item>Miski</item>
+        <item>Sprzęty elektryczne</item>
+        <item>Zabawki</item>
+        <item>Smycze</item>
+        <item>Obroże</item>
+    </array>
+
+    <array name="categoriesAnimalsIDS">
+        <item>cA1</item>
+        <item>cA2</item>
+        <item>cA3</item>
+        <item>cA4</item>
+        <item>cA5</item>
+        <item>cA6</item>
+        <item>cA7</item>
+        <item>cA8</item>
+        <item>cA9</item>
+        <item>cA10</item>
+        <item>cA11</item>
+    </array>
+    
+    
+
+    <array name="categories">
+        <item>Osoba prywatna</item>
+        <item>Schronisko dla bezdomnych</item>
+        <item>Schronisko dla zwierząt</item>
+        <item>Organizacja charytatywna</item>
+        <item>Dom spokojnej starości</item>
+        <item>Szpital</item>
+        <item>Inne</item>
+    </array>
+
+    <array name="evCat">
+        <item>Wypadek</item>
+        <item>Problem utrudniający życie</item>
+        <item>Wydarzenie zagrażające życiu lub zdrowiu</item>
+        <item>Niebezpieczne miejsce</item>
+        <item>Inne</item>
+    </array>
+    <array name="evCatIDS">
+        <item>evC1</item>
+        <item>evC2</item>
+        <item>evC3</item>
+        <item>evC4</item>
+        <item>evC5</item>
+
+    </array>
+    <array name="idCat">
+        <item>Budowa nowej infrastuktóry</item>
+        <item>Remont obecnej infratuktóry</item>
+        <item>Nowa organizacja społeczna</item>
+        <item>Nowe cykliczne wydarzenie społeczne</item>
+        <item>Inna</item>
+    </array>
+    <array name="idCatIDS">
+        <item>evC1</item>
+        <item>evC2</item>
+        <item>evC3</item>
+        <item>evC4</item>
+        <item>evC5</item>
+
+    </array>
+    <array name="categoriesIDS">
+        <item>c1</item>
+        <item>c2</item>
+        <item>c3</item>
+        <item>c4</item>
+        <item>c5</item>
+        <item>c6</item>
+        <item>c7</item>
+    </array>
+
+
+    <array name="eventCategories">
+        <item>Zbiórka pieniędzy</item>
+        <item>Inicjatywa społeczna</item>
+        <item>Schronisko dla zwierząt</item>
+        <item>Organizacja charytatywna</item>
+        <item>Dom spokojnej starości</item>
+    </array>
+
+    <array name="eventCategoriesIDS">
+        <item>e1</item>
+        <item>e2</item>
+        <item>e3</item>
+        <item>e4</item>
+        <item>e5</item>
+    </array>
+    <array name="profession">
+        <item>Nie podawaj</item>
+        <item>Nauczyciel</item>
+        <item>Prawnik</item>
+        <item>Uczeń</item>
+        <item>Student</item>
+        <item>Kierowca</item>
+        <item>Kucharz</item>
+    </array>
+    <array name="professionIDS">
+        <item>p1</item>
+        <item>p2</item>
+        <item>p3</item>
+        <item>p4</item>
+        <item>p5</item>
+        <item>p6</item>
+        <item>p7</item>
+    </array>
+
+</resources>
