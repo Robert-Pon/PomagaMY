@@ -1,0 +1,43 @@
+package com.name.social_helper_r_p.connections;
+
+public class URLS {
+    //public String URL(){return "http://192.168.1.100:3001";}
+    //public String URL(){return "http://publicati.pl";}
+    public String URL(){return "URL";}
+    public String login(){return "/api/users/login";}
+    public String register(){return "/api/users/register";}
+    public String addType1(){return "/api/announcements/add_type_1";}
+    public String updateType1(){return "/api/announcements/update_type_1";}
+    public String addType2(){return "/api/announcements/add_type_2";}
+    public String updateType2(){return "/api/announcements/update_type_2";}
+    public String addType3(){return "/api/announcements/add_type_3";}
+    public String addType4(){return "/api/announcements/add_type_4";}
+    public String addType5(){return "/api/announcements/add_type_5";}
+    public String updateType3(){return "/api/announcements/update_type_3";}
+    public String getAllFromMap(){return "/api/announcements/get-all";}
+    public String getFromLocalization(){return "/api/announcements/get-from-localization";}
+    public String getLastMessages(){return "/api/chat/get_messages";}
+    public String getLastChats(){return "/api/chat/getChats";}
+    public String getWithFilters(){return "/api/announcements/get-with-filters";}
+    public String search(){return "/api/announcements/search";}
+    public String setProfileData(){return "/api/profile/set-data";}
+    public String setPassword(){return "/api/profile/set-password";}
+    public String updateProfileImage(){return "/api/profile/set-profile";}
+    public String getAnn(){return "/api/announcements/get-announcement";}
+    public String getPoster(){return "/api/announcements/get-poster";}
+    public String getProfileImage(){return "/api/profile/get-profile-image/";}
+    public String getProfileAn(){return "/api/profile/get-profile-an";}
+    public String getImageFromAnn(){return "/api/announcements/get-image-from-ann";}
+    public String vote(){return "/api/announcements/vote_type_5";}
+    public String vote3(){return "/api/announcements/vote_type_3";}
+    public String uploadImageToChat(){return "/api/chat/uploadImage";}
+    public String getImageFromCon(){return "/api/chat/get-chat-image/";}
+    public String getUpdate1(){return "/api/announcements/get-update-1";}
+    public String getUpdate2(){return "/api/announcements/get-update-2";}
+    public String deleteAnn(){return "/api/announcements/delete";}
+    public String getUser(){return "/api/announcements/getUser";}
+    public String setProfession(){return "/api/announcements/set-profile-proffesion";}
+    public String getStats(){return "/api/announcements/get-stats";}
+    public String getArticles(){return "/api/announcements/get-articles";}
+    public String getArticle(){return "/api/announcements/get-article";}
+}
