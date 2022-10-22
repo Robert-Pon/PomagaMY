@@ -116,7 +116,7 @@
                     android:layout_weight="1"
                     android:padding="5dp"
                     android:fontFamily="@font/inter"
-                    android:text="Aby dodać nowe ogłoszenie, wystarczy kliknąć ikonke plusa nad mapą, a następnie wybrać kategorie zgłoszenia. Później wypełnij wszystkie pola odpowiednimi informacjami, i kliknij wyślij!"
+                    android:text="Aby dodać nowe ogłoszenie, wystarczy kliknąć ikonke plusa nad mapą, a następnie wybrać kategorie zgłoszenia. Później wypełnij wszystkie pola odpowiednimi informacjami i kliknij wyślij!"
                     android:textColor="@color/text_c"
                     android:textSize="15dp" />
 
@@ -211,7 +211,7 @@
                     android:layout_weight="1"
                     android:padding="5dp"
                     android:fontFamily="@font/inter"
-                    android:text="Przycisk z ikonką skarbonki przy ogłoszeniach w twoim profilu służy do zaktualizowania ogłoszenia, w sprawię zdobytych rzeczy. Aby to zrobić kliknij przycisk, ustaw odpowowiednią ilośc poszczególnych rzeczy, kliknij dalej i zeskanuj kod QR profilu drugiego (pkt. 3) użytkownika, który udziela pomoc, lub któremu Ty udzielasz pomocy."
+                    android:text="Przycisk z ikonką skarbonki przy ogłoszeniach w twoim profilu służy do zaktualizowania ogłoszenia, w sprawię zdobytych rzeczy. Aby to zrobić kliknij przycisk, ustaw odpowowiednią ilośc poszczególnych rzeczy, kliknij dalej i zeskanuj kod QR profilu drugiego (pkt. 3) użytkownika, który udziela pomoc, lub któremu Ty udzielasz pomocy. Po pozytywnym zeskanowaniu zostaniesz cofnięty do poprzedniego ekranu, a w systemie zostanie zarejestrowana nowa aktywnosć."
                     android:textColor="@color/text_c"
                     android:textSize="15dp" />
 
