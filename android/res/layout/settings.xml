@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Ustawienia"
+        android:textColor="@color/text_c"
+        android:fontFamily="@font/inter_extrabold"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/logOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Zdjęcie profilowe"
+            android:textColor="#000"
+            android:textColorHint="#454545"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/person_small"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/data_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Dane profilu"
+            android:textColor="#000"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/desc"
+            android:textColorHint="#454545"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/profession"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Profesja"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/group"
+            android:textColor="#000"
+            android:textColorHint="#454545"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Zmiana hasła"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/password"
+            android:textColor="#000"
+            android:textColorHint="#454545"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/qr"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="QR profilu"
+            android:textColor="#000"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/qr_small"
+            android:textColorHint="#454545"
+            android:textSize="18dp" />
+        <TextView
+            android:id="@+id/inst"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Instrukcja"
+            android:textColor="#000"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/desc"
+            android:textColorHint="#454545"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/libs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Wykorzystane biblioteki"
+            android:textColor="#000"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/lib"
+            android:textColorHint="#454545"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wyloguj się"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:background="@drawable/square_button"
+        android:backgroundTint="@color/button_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

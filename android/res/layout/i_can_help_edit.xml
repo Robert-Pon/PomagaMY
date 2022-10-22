@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/design_bottom_sheet"
+    app:layout_behavior="com.your.package.LockableBottomSheetBehavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_extrabold"
+                android:text="Dodaj"
+                android:textColor="@color/text_c"
+                android:textSize="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:hint="Jak możesz pomóc?"
+                    android:inputType="textPersonName"
+                    android:minWidth="200dp"
+                    android:minHeight="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="2"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Opis"
+                android:inputType="textMultiLine"
+                android:padding="10dp" />
+
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_c"
+                android:fontFamily="@font/bold_inter"
+                android:textSize="20dp"
+                android:text="Kategoria" />
+
+            <Spinner
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/text_c"
+                android:fontFamily="@font/bold_inter"
+                android:textSize="20dp"
+                android:background="@drawable/edit_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/under_el">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/text_c"
+                    android:fontFamily="@font/bold_inter"
+                    android:textSize="20dp"
+                    android:text="Podkategoria" />
+
+                <Spinner
+                    android:id="@+id/second_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_c"
+                android:fontFamily="@font/bold_inter"
+                android:textSize="20dp"
+                android:text="Ilość" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/minus"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/square_button"
+                    android:backgroundTint="@color/button_1"
+                    android:text="-" />
+
+                <EditText
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text"
+                    android:ems="10"
+                    android:hint="Ilość"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="1" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/square_button"
+                    android:backgroundTint="@color/button_1"                android:text="+" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_c"
+                android:textSize="20dp"
+                android:fontFamily="@font/bold_inter"
+                android:text="Lokalizacja" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/localization"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/l1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:checked="true"
+                        android:checkable="true"
+                        style="@style/chip_1"
+                        android:text="Podaj swoją lokalizację ulicy" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/l2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:checkable="true"
+                        style="@style/chip_1"
+                        android:text="Podaj lokalizację miejscowości" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/l3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:checkable="true"
+                        style="@style/chip_1"
+                        android:text="Nie podawaj lokalizacji" />
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_c"
+                android:textSize="20dp"
+                android:fontFamily="@font/bold_inter"
+                android:text="Priorytet" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginEnd="10dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/priority"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/p1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:checked="true"
+                        android:checkable="true"
+                        style="@style/chip_1"
+                        android:text="Normalny" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/p2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:checkable="true"
+                        style="@style/chip_1"
+                        android:text="Ważny" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/p3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:checkable="true"
+                        style="@style/chip_1"
+                        android:text="Bardzo ważny" />
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_c"
+                android:textSize="20dp"
+                android:fontFamily="@font/bold_inter"
+                android:text="Data wygaśnięcia" />
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/choose_date"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_text"
+                android:textColor="@color/text_c"
+                android:padding="10dp"
+                android:text="Wybierz datę"
+                android:gravity="center_vertical"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/square_button"
+                android:text="Dodaj"
+                android:backgroundTint="@color/button_1"
+                android:textAllCaps="false" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/square_button"
+                android:backgroundTint="@color/button_1"
+                android:text="Usuń"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

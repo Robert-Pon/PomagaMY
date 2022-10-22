@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inter_extrabold"
+        android:text="Krótka instrukcja"
+        android:textColor="@color/text_c"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card"
+
+            >
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="@color/button_1"
+                android:id="@+id/delete"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/type"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/info" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Cała aplikacja składa się z 4 głównych okien (mapa, chaty, statystyki, profil)"
+                    android:textColor="@color/text_c"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:background="@drawable/card"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="@color/button_1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/type"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/add" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Aby dodać nowe ogłoszenie, wystarczy kliknąć ikonke plusa nad mapą, a następnie wybrać kategorie zgłoszenia. Później wypełnij wszystkie pola odpowiednimi informacjami, i kliknij wyślij!"
+                    android:textColor="@color/text_c"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/card"
+
+    >
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="@color/button_1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/type"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/qr" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="W ustawieniach profilu znajdziesz zakładkę QR profilu. Pokazuje ona twój unikalny kod QR , który wykorzystuje się do zaznaczenia w systemach naszej aplikacji, że udzieliłeś lub ktoś Tobie udzielił pomocy (pkt. 4)."
+                    android:textColor="@color/text_c"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/card"
+
+            >
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="@color/button_1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/type"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/bill" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Przycisk z ikonką skarbonki przy ogłoszeniach w twoim profilu służy do zaktualizowania ogłoszenia, w sprawię zdobytych rzeczy. Aby to zrobić kliknij przycisk, ustaw odpowowiednią ilośc poszczególnych rzeczy, kliknij dalej i zeskanuj kod QR profilu drugiego (pkt. 3) użytkownika, który udziela pomoc, lub któremu Ty udzielasz pomocy."
+                    android:textColor="@color/text_c"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/card"
+
+            android:layout_height="wrap_content"
+            >
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="@color/button_1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/type"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/tune" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Przycisk ten odsyła Ciebie do filtrów, dzięki niemu możesz zdecydować z jakiej kategorii chcesz wyszukać powiadomienia na mapie."
+                    android:textColor="@color/text_c"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+        android:background="@drawable/card"
+            android:layout_height="wrap_content"
+            >
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="@color/button_1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/type"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/chart" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Jest to ankieta pojawiająca się pod każdą inicjatywą społeczną. Daje ona możliwosc anonimowego zagłosowania za/przeciw pomysłowi. W ankiecie można zagłosować raz bez możliwośc zmiany głosu!"
+                    android:textColor="@color/text_c"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/square_button"
+            android:backgroundTint="@color/button_1"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
+            android:text="Zrozumiałem!" />
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
