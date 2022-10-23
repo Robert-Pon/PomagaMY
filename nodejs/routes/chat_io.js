@@ -85,6 +85,39 @@ const socketSetter = (server) => {
                         type: "text",
                         time: date.getTime()
                     }]})
+                    
+                    socket.to(userID).emit('newMessage', {room: ID, message:{
+                        _id:id,
+                        user: ID,
+                        content: message,
+                        state: 0,
+                        type: "text",
+                        time: date.getTime()
+                    }}, 
+                    (err, suc)=>{
+                        if(err){
+                            socket.emit('delivered', {result: false, message: "Emit error"})
+                            io.to(ID).emit('newMessage', {room: userID, message:{
+                                _id:id,
+                                user: ID,
+                                content: message,
+                                state: 0,
+                                type: "text",
+                                time: date.getTime()
+                            }})
+                        }else{
+                            io.to(ID).emit('newMessage', {room: userID, message:{
+                                _id:id,
+                                user: ID,
+                                content: message,
+                                state: 0,
+                                type: "text",
+                                time: date.getTime()
+                            }})
+                            socket.emit('delivered', {result: true, message: "Emit success"})
+                        }
+                    })
+                    
                 }else{
                     const user1 = await user_model.findOneAndUpdate({_id: ID, 'chats.id':userID}, {$set: {'chats.$.message': message, 'chats.$.time': date.getTime()}});
                     const user2 = await user_model.findOneAndUpdate({_id: userID, 'chats.id':ID}, {$set: {'chats.$.message': message, 'chats.$.time': date.getTime()}})
