@@ -304,7 +304,7 @@ router.post('/api/announcements/get-all' ,async (req, res)=>{
         let i = 0;
         const x = [];
         for(const e of selected.type_3){
-            let selected1 = await evModel.findOne({location: e._id, endingDate: {$gte: time}});
+            let selected1 = await evModel.findOne({location: e._id, endingDate: {$gte: time}},'name');
             if(selected1!=null){
                 x.push(e)
             }
@@ -319,7 +319,7 @@ router.post('/api/announcements/get-all' ,async (req, res)=>{
         let i = 0;
         const x = [];
         for(const e of selected.type_4){
-            let selected1 = await actModel.findOne({location: e._id, endingDate: {$gte: time}});
+            let selected1 = await actModel.findOne({location: e._id, endingDate: {$gte: time}},'title');
             if(selected1!=null){
                 x.push(e)
             }
@@ -334,7 +334,7 @@ router.post('/api/announcements/get-all' ,async (req, res)=>{
         let i = 0;
         const x = [];
         for(const e of selected.type_5){
-            let selected1 = await ideaModel.findOne({location: e._id, endingDate: {$gte: time}});
+            let selected1 = await ideaModel.findOne({location: e._id, endingDate: {$gte: time}},'title');
             if(selected1!=null){
                 x.push(e)
             }
@@ -394,7 +394,7 @@ router.post("/api/announcements/get-with-filters", async (req, res) => {
                     let i = 0;
                     const x = [];
                     for(const e of selected.type_3){
-                        let selected1 = await evModel.findOne({location: e._id, endingDate: {$gte: time}});
+                        let selected1 = await evModel.findOne({location: e._id, endingDate: {$gte: time}},'name');
                         if(selected1!=null){
                             x.push(e)
                         }
@@ -410,7 +410,7 @@ router.post("/api/announcements/get-with-filters", async (req, res) => {
                     let i = 0;
                     const x = [];
                     for(const e of selected.type_4){
-                        let selected1 = await actModel.findOne({location: e._id, endingDate: {$gte: time}});
+                        let selected1 = await actModel.findOne({location: e._id, endingDate: {$gte: time}},'title');
                         if(selected1!=null){
                             x.push(e)
                         }
@@ -426,7 +426,7 @@ router.post("/api/announcements/get-with-filters", async (req, res) => {
                     let i = 0;
                     const x = [];
                     for(const e of selected.type_5){
-                        let selected1 = await ideaModel.findOne({location: e._id, endingDate: {$gte: time}});
+                        let selected1 = await ideaModel.findOne({location: e._id, endingDate: {$gte: time}},'title');
                         if(selected1!=null){
                             x.push(e)
                         }
@@ -498,7 +498,7 @@ router.post("/api/announcements/search", async (req, res) => {
                         {$or:[{ title:{$regex: ".*"+search.search+".*"}}, { description:{$regex: ".*"+search.search+".*"}}]}
                         , {lat: {$gte: down, $lte: up}}
                         , {lon:{$gte: left, $lte: right}}
-                ]});
+                ]}, 'location');
                 const ids3 = [];
                 selected.type_4.forEach(e=>{
                     if(!ids3.find(x=> x==e.location )){
@@ -513,7 +513,7 @@ router.post("/api/announcements/search", async (req, res) => {
                         {$or:[{ title:{$regex: ".*"+search.search+".*"}}, { description:{$regex: ".*"+search.search+".*"}}]}
                         , {lat: {$gte: down, $lte: up}}
                         , {lon:{$gte: left, $lte: right}}
-                ]});
+                ]}, 'location');
                 const ids4 = [];
                 selected.type_5.forEach(e=>{
                     if(!ids4.find(x=> x==e.location )){
